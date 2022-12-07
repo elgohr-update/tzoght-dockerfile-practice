@@ -36,6 +36,6 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: tzoght/522# CHANGE THIS to your DockerHub username and repository!
-        username: ${{ secrets.DOCKER_USERNAME }} 
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ DOCKER_USERNAME }} 
+        password: ${{ DOCKER_PASSWORD }}
         tags: "latest,${{ steps.bump.outputs.new_tag }}"
